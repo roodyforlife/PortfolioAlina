@@ -399,16 +399,19 @@ line-height: 38px;
         top: 9px;
         transition: all 0.3s ease 0s;
     }
+    .header__link{
+        margin-left: 0;
+    }
     .header__menu
     {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 200px;
+        width: 35%;
         height: 100%;
         background: #fff;
         z-index: 0;
-        padding: 100px 10px;
+        padding: 100px 20px;
         transition: all 0.3s ease 0s;
     }
     .header__menu.active{
@@ -461,4 +464,13 @@ line-height: 38px;
     .contacts__items{
         margin-top: 20px;
     }
+}
+@media(max-width: 390px)
+{
+    .header__menu{
+        width: 45%;
+    }
+    .header__link{
+        font-size: 16px;
+    }   
 }
