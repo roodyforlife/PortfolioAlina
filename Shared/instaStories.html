@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/nullStyle.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/photos.css">
+    <title>Photos</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="../js/script.js"></script>
+    <div class="container">
+        <div class="header">
+            <div class="header__body">
+                <a href="../index.html" class="header__logo">
+                    <img src="../img/logo.png" alt="">
+                </a>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a href="../index.html#home" class="text3 header__link">Home</a>
+                        </li>
+                        <li>
+                            <a href="" class="text3 header__link">About me</a>
+                        </li>
+                        <li>
+                            <a href="../index.html#works" class="text3 header__link">My works</a>
+                        </li>
+                        <li>
+                            <a href="../index.html#contacts" class="text3 header__link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="photos">
+            <div class="text2 photos__title">Instagram Stories</div>
+            <div class="photos__content">
+                <!--
+                    Добавить фотографию в папку img/instaStories.
+                    ! ВАЖНО, В ФОРМАТЕ .jpg и с названием photo_n.jpg !
+                    Затем в этом файле добавить строчку > <div class="photos__content__item"></div>
+                -->
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+                <div class="photos__content__item"></div>
+            </div>
+        </div>
+    </div>
+    <div class="full__image">
+        <img class="toggle__image" src="" alt="">
+        <div class="full__image__exit" onclick="view()"></div>
+    </div>
+    <script>
+         $(document).ready(function () {
+  let photos = document.querySelectorAll(".photos__content__item");
+  for (let i = 0; i < photos.length; i++) {
+    photos[i].setAttribute('onclick', 'view(this)');
+    photos[i].insertAdjacentHTML(
+      "beforeend",
+      `<img src="../img/instaStories/photo_${i + 1}.jpg" alt="">
+      <div class="text2 photos__content__item__hover"><span>View</span><div>`
+    );
+  }
+});
+    </script>
+</body>
+
+</html>
